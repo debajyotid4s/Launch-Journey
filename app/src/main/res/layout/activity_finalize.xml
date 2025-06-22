@@ -3,66 +3,145 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/babypink"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/babypink"
     tools:context=".Finalize">
 
-    <ImageView
-        android:id="@+id/imageDone"
-        android:layout_width="247dp"
-        android:layout_height="178dp"
-        android:elevation="20dp"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.277">
-
-    </ImageView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView8"
-        android:layout_width="300dp"
-        android:layout_height="220dp"
+    <!-- Success Animation Container -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/successCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
         app:cardBackgroundColor="@color/lpurple"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262">
+        app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="387dp"
-        android:layout_height="238dp"
-        android:elevation="10dp"
-        android:padding="10dp"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="@color/babypink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView8"
-        app:layout_constraintVertical_bias="0.319">
-
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/mi_sans"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="Congratulations!! We will be get back to you in short time after verifying your Payment. And your ticket you will be sent to you through E-mail. Happy Journey! Thanks for being with LaunchJourney - Team"
-            android:textSize="22sp"
-            android:textColor="@color/dpurple">
+            android:layout_height="match_parent">
 
-        </TextView>
+            <ImageView
+                android:id="@+id/imageDone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="24dp"
+                android:contentDescription="Payment Success"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/congratulationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/mi_sans"
+        android:text="Congratulations!"
+        android:textColor="@color/dpurple"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/successCardView" />
+
+    <!-- Message Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/messageCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/congratulationTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/babypink"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mi_sans"
+                android:gravity="center"
+                android:lineSpacingExtra="4sp"
+                android:text="We will get back to you shortly after verifying your payment. Your ticket will be sent to your email address."
+                android:textColor="@color/dpurple"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/lpurple" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mi_sans"
+                android:gravity="center"
+                android:text="Happy Journey!"
+                android:textColor="@color/dpurple"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mi_sans"
+                android:gravity="center"
+                android:text="Thanks for being with LaunchJourney"
+                android:textColor="@color/dpurple"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Return to Home Button (Fixed) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReturnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/mi_sans"
+        android:paddingStart="24dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="12dp"
+        android:text="Return to Home"
+        android:textSize="16sp"
+        app:backgroundTint="@color/dpurple"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageCard"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

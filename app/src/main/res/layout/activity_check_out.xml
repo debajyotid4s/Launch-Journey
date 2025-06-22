@@ -18,8 +18,9 @@
         android:textAllCaps="true"
         android:fontFamily="@font/mi_sans"
         android:textStyle="bold"
-        android:textColor="@color/dpurple"
+        android:textColor="@color/white"
         android:contextClickable="false"
+        android:background="@drawable/gradient_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +105,7 @@
             <EditText
                 android:id="@+id/payableEdttext"
                 android:layout_width="77dp"
-                android:layout_height="46dp"
+                android:layout_height="53dp"
                 android:fontFamily="@font/mi_sans"
                 android:textColor="@color/red"
                 android:textSize="22sp"
@@ -114,7 +115,7 @@
                 app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.413" />
+                app:layout_constraintVertical_bias="0.367" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -175,7 +176,7 @@
         android:id="@+id/btnPaydone"
         android:layout_width="153dp"
         android:layout_height="57dp"
-        android:background="@color/blue"
+        android:background="@drawable/btn_rounded_corner"
         android:text="All Done?"
         android:fontFamily="@font/mi_sans"
         android:textSize="22sp"

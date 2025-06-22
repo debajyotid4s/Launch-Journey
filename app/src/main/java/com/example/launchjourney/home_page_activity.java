@@ -47,7 +47,6 @@ public class home_page_activity extends AppCompatActivity {
         destination_spinner = findViewById(R.id.destination_spinner);
         date_picker_button = findViewById(R.id.date_picker_button);
         search_trip_button = findViewById(R.id.search_trip_button);
-        logout_button = findViewById(R.id.logout_button);
 
         // Initialize the title TextView
         TextView homepageTitle = findViewById(R.id.homepage_title);
@@ -143,14 +142,14 @@ public class home_page_activity extends AppCompatActivity {
 
 
         // Handle logout button click
-        logout_button.setOnClickListener(view -> {
-            FirebaseAuth.getInstance().signOut(); // Sign out from Firebase
-            Toast.makeText(home_page_activity.this, "Logged out successfully", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(home_page_activity.this, MainActivity.class);
-            startActivity(intent);
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            finish();
-        });
+//        logout_button.setOnClickListener(view -> {
+//            FirebaseAuth.getInstance().signOut(); // Sign out from Firebase
+//            Toast.makeText(home_page_activity.this, "Logged out successfully", Toast.LENGTH_SHORT).show();
+//            Intent intent = new Intent(home_page_activity.this, MainActivity.class);
+//            startActivity(intent);
+//            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+//            finish();
+//        });
     }
 
     // Method to update the "Destination" spinner after selecting an item in the "From" spinner
@@ -203,6 +202,13 @@ public class home_page_activity extends AppCompatActivity {
             startActivity(intent);
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             return true;
+        } else if(id == R.id.action_logout){
+            FirebaseAuth.getInstance().signOut(); // Sign out from Firebase
+            Toast.makeText(home_page_activity.this, "Logged out successfully", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(home_page_activity.this, MainActivity.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);

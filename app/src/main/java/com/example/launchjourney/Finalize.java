@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.Firebase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -21,6 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class Finalize extends AppCompatActivity {
     private String route, date, ticketType, launchName;
     private int ticketQuantity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,13 @@ public class Finalize extends AppCompatActivity {
             return insets;
         });
         ImageView done = findViewById(R.id.imageDone);
+        MaterialButton homeButton = findViewById(R.id.btnReturnHome);
+
+        homeButton.setOnClickListener(view -> {
+            Intent intent = new Intent (Finalize.this, home_page_activity.class);
+            startActivity(intent);
+        });
+
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(Finalize.this, home_page_activity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -48,6 +57,5 @@ public class Finalize extends AppCompatActivity {
                 .into(done);
 
     }
-
 
 }

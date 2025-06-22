@@ -64,7 +64,7 @@
         android:id="@+id/btnCancel"
         android:layout_width="115dp"
         android:layout_height="75dp"
-        android:background="@color/dpurple"
+        android:background="@drawable/btn_rounded_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextYes"
         android:text="Cancel"

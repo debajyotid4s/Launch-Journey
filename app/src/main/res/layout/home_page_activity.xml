@@ -157,28 +157,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/logout_button"
-        android:layout_width="72dp"
-        android:layout_height="75dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/mi_sans"
-        android:textSize="18sp" />
-
-    <!-- ImageView Over Logout Button -->
-    <ImageView
-        android:id="@+id/logout_icon"
-        android:layout_width="63dp"
-        android:layout_height="75dp"
-        android:layout_alignEnd="@id/logout_button"
-        android:layout_alignBottom="@id/logout_button"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="341dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Logout Icon"
-        android:src="@drawable/logout" />
-
 </RelativeLayout>
