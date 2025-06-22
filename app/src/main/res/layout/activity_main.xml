@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <!-- ImageView for GIF -->
+
+    <!-- TextView for welcome text -->
+
+    <ImageView
+        android:id="@+id/imgWelcome"
+        android:layout_width="367dp"
+        android:layout_height="252dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <TextView
+        android:id="@+id/WelcomePageText"
+        android:layout_width="466dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/mi_sans"
+        android:gravity="center"
+        android:text="Welcome To Launch Journey..."
+        android:textColor="@color/babypink"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgWelcome" />
+
+    <TextView
+        android:id="@+id/WelcomePageText2"
+        android:layout_width="286dp"
+        android:layout_height="69dp"
+        android:alpha=".7"
+        android:fontFamily="@font/futura_cyrillic_book"
+        android:padding="12dp"
+        android:shadowColor="@color/lgreen"
+        android:text="A platform for booking Tickets, for the River and Launch Enthusiasts!"
+        android:textColor="@color/limegreen"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
+
+    <ImageView
+        android:id="@+id/enterImg"
+        android:layout_width="86dp"
+        android:layout_height="74dp"
+        android:elevation="5dp"
+        android:src="@drawable/go"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="367dp"
+        android:layout_height="731dp"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/WelcomePageText"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/WelcomePageText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

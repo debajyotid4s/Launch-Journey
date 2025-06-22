@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/babypink"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Full Name -->
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/mi_sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtname">
+
+        <EditText
+            android:id="@+id/edtname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lblue"
+            android:hint="Enter your full name"
+            android:padding="12dp"
+            android:fontFamily="@font/mi_sans"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dgray" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Address -->
+    <TextView
+        android:id="@+id/txtadress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Address:"
+        android:textColor="@color/black"
+        android:fontFamily="@font/mi_sans"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/crdname" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdadress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtadress">
+
+        <EditText
+            android:id="@+id/edtadress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lblue"
+            android:hint="Enter your address"
+            android:padding="12dp"
+            android:fontFamily="@font/mi_sans"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dgray" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/txtemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/mi_sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/crdadress" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtemail">
+
+        <EditText
+            android:id="@+id/edtemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lblue"
+            android:hint="E-mail"
+            android:fontFamily="@font/mi_sans"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dgray" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Contact Number -->
+    <TextView
+        android:id="@+id/txtcontact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Number:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/mi_sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/crdemail" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:fontFamily="@font/mi_sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtcontact">
+
+        <EditText
+            android:id="@+id/edtcontact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lblue"
+            android:fontFamily="@font/mi_sans"
+            android:hint="Enter your contact number"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dgray" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Password -->
+    <TextView
+        android:id="@+id/txtpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:fontFamily="@font/mi_sans"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/crdcontact" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtpass">
+
+        <EditText
+            android:id="@+id/edtpass"
+            android:fontFamily="@font/mi_sans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lblue"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dgray" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/dpurple"
+        android:padding="18dp"
+        android:text="Register My Data"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/mi_sans"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/next_progress_bar"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="56dp"
+        android:indeterminateTint="@color/lpurple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegData" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="171dp"
+        android:layout_height="72dp"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/mi_sans"
+        android:padding="12dp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_next"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_progress_bar"
+        app:strokeColor="@color/dpurple"
+        app:strokeWidth="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

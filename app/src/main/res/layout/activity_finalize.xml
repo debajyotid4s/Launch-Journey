@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/babypink"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Finalize">
+
+    <ImageView
+        android:id="@+id/imageDone"
+        android:layout_width="247dp"
+        android:layout_height="178dp"
+        android:elevation="20dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277">
+
+    </ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView8"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        app:cardBackgroundColor="@color/lpurple"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.262">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="387dp"
+        android:layout_height="238dp"
+        android:elevation="10dp"
+        android:padding="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/babypink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView8"
+        app:layout_constraintVertical_bias="0.319">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/mi_sans"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Congratulations!! We will be get back to you in short time after verifying your Payment. And your ticket you will be sent to you through E-mail. Happy Journey! Thanks for being with LaunchJourney - Team"
+            android:textSize="22sp"
+            android:textColor="@color/dpurple">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

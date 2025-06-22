@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/babypink"
+    tools:context=".TicketCancel">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView10"
+        android:layout_width="398dp"
+        android:layout_height="214dp"
+        android:elevation="10dp"
+        android:outlineAmbientShadowColor="@color/dpurple"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.334">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/mi_sans"
+            android:gravity="center"
+            android:text="Are you want to CANCEL the slected ticket? If so type YES on the textbox below and proceed."
+            android:textColor="@color/lred"
+            android:textSize="18sp"
+            android:textStyle="bold">
+
+        </TextView>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="top"
+            android:alpha="0.7"
+            android:src="@drawable/warning">
+
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/editTextYes"
+        android:layout_width="164dp"
+        android:layout_height="69dp"
+        android:inputType="text"
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="@font/mi_sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView10" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        android:layout_width="115dp"
+        android:layout_height="75dp"
+        android:background="@color/dpurple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextYes"
+        android:text="Cancel"
+        android:textColor="@color/dpurple"
+        app:layout_constraintStart_toStartOf="@+id/editTextYes"
+        app:layout_constraintTop_toBottomOf="@+id/editTextYes">
+
+    </com.google.android.material.button.MaterialButton>
+</androidx.constraintlayout.widget.ConstraintLayout>

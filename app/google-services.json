@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "204053872780",
+    "project_id": "launch-jatra",
+    "storage_bucket": "launch-jatra.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204053872780:android:d55173955c3b1484e3bba9",
+        "android_client_info": {
+          "package_name": "com.example.launchjourney"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB05ECK6h0lQGARqClHoU2sSldgWPkmMrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

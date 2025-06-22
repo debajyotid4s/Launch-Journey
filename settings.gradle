@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal() // Required for plugins in the `plugins` block
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS) // Ensures settings.gradle repositories are used
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+
+rootProject.name = "Launch Journey"
+include ':app'

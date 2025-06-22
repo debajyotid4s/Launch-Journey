@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_width="369dp"
+        android:layout_height="367dp"
+        android:alpha="1"
+        android:background="@drawable/selected_border"
+        android:backgroundTint="@color/lpurple"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004">
+
+        <TextView
+            android:id="@+id/tvLaunchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mi_sans"
+            android:padding="5dp"
+            android:text="Launch Name: "
+            android:textColor="@color/dpurple"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLaunchRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mi_sans"
+            android:padding="5dp"
+            android:text="On Route: "
+            android:textColor="@color/dpurple"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvLaunchDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mi_sans"
+            android:padding="5dp"
+            android:text="Journey Date: "
+            android:textColor="@color/dpurple"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLaunchDepartureTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mi_sans"
+            android:padding="5dp"
+            android:text="Deperture Time: "
+            android:textColor="@color/dpurple"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvLaunchTicketType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mi_sans"
+            android:padding="5dp"
+            android:text="Your Ticket's Class: "
+            android:textColor="@color/dpurple"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvLaunchTicketQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mi_sans"
+            android:padding="5dp"
+            android:text="Ticket Quantity: "
+            android:textColor="@color/dpurple"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvLaunchPaymentID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mi_sans"
+            android:padding="5dp"
+            android:text="Your Payment ID: "
+            android:textColor="@color/dpurple"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="317dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/mi_sans"
+            android:gravity="center"
+            android:text="( If you want to cancel this Ticket, Click on it. )"
+            android:textColor="@color/dpurple"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:id="@+id/imgExpired"
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:src="@drawable/expired">
+
+        </ImageView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

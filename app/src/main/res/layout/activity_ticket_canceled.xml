@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/babypink"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketCanceled">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/cancelled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="275dp"
+        android:layout_height="155dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="8dp"
+        android:outlineAmbientShadowColor="@color/dpurple"
+        app:cardBackgroundColor="@color/babypink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Your Ticket Cancellation is Initiated. We will get back to you soon and your Refund will be sent to you by 7 - 15 working days! Thanks for being with LaunchJourney."
+            android:gravity="center"
+            android:textStyle="normal"
+            android:fontFamily="@font/mi_sans"
+            android:textSize="18sp">
+
+        </TextView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
