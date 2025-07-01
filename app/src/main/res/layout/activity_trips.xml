@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/babypink"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/babypink"
     tools:context=".trips">
 
     <androidx.cardview.widget.CardView
@@ -13,6 +13,8 @@
         android:layout_width="272dp"
         android:layout_height="78dp"
         app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -21,24 +23,24 @@
         app:layout_constraintVertical_bias="0.111">
 
         <TextView
-            android:layout_width="272dp"
-            android:layout_height="78dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selected_border"
             android:fontFamily="@font/mi_sans"
             android:gravity="center"
             android:padding="18dp"
-            android:background="@drawable/selected_border"
-            android:text="Record of Trips::"
+            android:text="Record of Trips:"
             android:textColor="@color/dpurple"
             android:textSize="22sp"
-            android:textStyle="italic">
+            android:textStyle="italic" />
 
-        </TextView>
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tripsRecyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="674dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

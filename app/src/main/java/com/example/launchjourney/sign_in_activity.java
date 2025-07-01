@@ -86,9 +86,8 @@ public class sign_in_activity extends AppCompatActivity {
                             Intent intent = new Intent(sign_in_activity.this, home_page_activity.class);
                             startActivity(intent);
                             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-
-                            Log.d("FirebaseAuth", "Sign-in successful: " + user.getEmail());
-                        } else {
+                            finish();
+                            } else {
                             // Sign-in failed
                             Exception e = task.getException();
                             if (e != null) {

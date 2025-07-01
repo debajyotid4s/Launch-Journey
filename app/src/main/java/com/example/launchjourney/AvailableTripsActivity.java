@@ -34,6 +34,7 @@ public class AvailableTripsActivity extends AppCompatActivity {
     private String date;
 
     private RecyclerView recyclerView;
+    private TextView noTripsFoundText;
     private LaunchAdapter launchAdapter;
     private List<Launch> launchList;
 
@@ -47,7 +48,7 @@ public class AvailableTripsActivity extends AppCompatActivity {
 
         launchList = new ArrayList<>();
 
-
+        noTripsFoundText = findViewById(R.id.noTripsFoundText);
         db = FirebaseFirestore.getInstance();
         route = getIntent().getStringExtra("route");
         notdate = getIntent().getStringExtra("selectedDate");
@@ -90,13 +91,25 @@ public class AvailableTripsActivity extends AppCompatActivity {
                             Log.d(TAG, "Fetched Launch: " + launch.getName() + ", Deck: " + launch.getDeck() + ", S-Cabin: " + launch.getScabin() + ", VIP: " + launch.getVip());
                             launchList.add(launch);
                         }
-                        launchAdapter.notifyDataSetChanged();
+                        if (launchList.isEmpty()) {
+                            displayNoTripsFound();
+                        } else {
+                            // Make sure RecyclerView is visible when we have data
+                            recyclerView.setVisibility(View.VISIBLE);
+                            noTripsFoundText.setVisibility(View.GONE);
+                            launchAdapter.notifyDataSetChanged();
+                        }
                     } else {
+                        // Error or no trips found
                         Log.e(TAG, "Error fetching documents: ", task.getException());
+                        displayNoTripsFound();
                     }
                 });
     }
-
+    private void displayNoTripsFound() {
+        recyclerView.setVisibility(View.GONE);
+        noTripsFoundText.setVisibility(View.VISIBLE);
+    }
 
     public static String formatDate(String inputDate) {
         // Possible input formats

@@ -18,6 +18,7 @@
         android:textAllCaps="true"
         android:fontFamily="@font/mi_sans"
         android:textStyle="bold"
+        android:gravity="center"
         android:textColor="@color/white"
         android:contextClickable="false"
         android:background="@drawable/gradient_bg"

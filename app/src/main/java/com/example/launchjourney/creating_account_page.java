@@ -50,9 +50,11 @@ public class creating_account_page extends AppCompatActivity {
         btnNext = findViewById(R.id.btnNext);
         next_progress_bar = findViewById(R.id.next_progress_bar);
         next_progress_bar.setVisibility(View.GONE);
+
         btnRegister.setOnClickListener(view -> {
             storeUserDataToDB();
         });
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +65,6 @@ public class creating_account_page extends AppCompatActivity {
     }
 
     private void storeUserDataToDB() {
-        // Forwarding toward verification page
         String name = edtname.getText().toString().trim();
         String address = edtadress.getText().toString().trim();
         String password = edtpass.getText().toString().trim();
@@ -86,14 +87,12 @@ public class creating_account_page extends AppCompatActivity {
 
         next_progress_bar.setVisibility(View.VISIBLE);
 
-        // Check if email already exists in Firebase Authentication
         auth.fetchSignInMethodsForEmail(email)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         boolean isNewUser = task.getResult().getSignInMethods().isEmpty();
 
                         if (!isNewUser) {
-                            // Email exists, show message and suggest login
                             next_progress_bar.setVisibility(View.GONE);
                             Toast.makeText(creating_account_page.this,
                                     "Account already registered. Please log in.",
@@ -102,11 +101,9 @@ public class creating_account_page extends AppCompatActivity {
                             Intent intent = new Intent(creating_account_page.this, sign_in_activity.class);
                             startActivity(intent);
                         } else {
-                            // Email doesn't exist, proceed with registration
                             registerNewUser(name, address, email, contact, password);
                         }
                     } else {
-                        // Error checking email existence
                         next_progress_bar.setVisibility(View.GONE);
                         Toast.makeText(creating_account_page.this,
                                 "Error checking email: " + task.getException().getMessage(),
@@ -117,33 +114,31 @@ public class creating_account_page extends AppCompatActivity {
 
     private void registerNewUser(String name, String address, String email,
                                  String contact, String password) {
-        // Hash the password using BCrypt
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
-        // Register the user in Firebase Authentication
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         String userId = auth.getCurrentUser().getUid();
 
-                        // Create a map for Firestore
                         Map<String, Object> userData = new HashMap<>();
                         userData.put("name", name);
                         userData.put("address", address);
                         userData.put("email", email);
                         userData.put("contact", contact);
-                        userData.put("password", hashedPassword); // Store the hashed password
+                        userData.put("password", hashedPassword);
                         userData.put("userId", userId);
 
-                        // Save user data in Firestore
                         firestore.collection("users").document(userId)
                                 .set(userData)
                                 .addOnSuccessListener(aVoid -> {
                                     next_progress_bar.setVisibility(View.GONE);
-                                    // Store UID in Realtime Database
                                     realtimeDb.child("users").child(userId).setValue(true)
                                             .addOnSuccessListener(aVoid2 -> {
                                                 Toast.makeText(this, "User Registered Successfully!", Toast.LENGTH_SHORT).show();
+                                                // **Sign out after registration so user is NOT logged in**
+                                                auth.signOut();
+                                                // Stay on this page
                                             })
                                             .addOnFailureListener(e -> {
                                                 Toast.makeText(this, "Failed to save UID in Realtime Database", Toast.LENGTH_SHORT).show();
@@ -158,5 +153,14 @@ public class creating_account_page extends AppCompatActivity {
                         Toast.makeText(this, "Registration Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    // Ensure back goes to signup page
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(creating_account_page.this, sign_in_activity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 }

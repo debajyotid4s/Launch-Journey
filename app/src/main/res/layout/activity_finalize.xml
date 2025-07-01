@@ -136,6 +136,7 @@
         android:paddingBottom="12dp"
         android:text="Return to Home"
         android:textSize="16sp"
+        android:textColor="@color/white"
         app:backgroundTint="@color/dpurple"
         app:cornerRadius="24dp"
         app:layout_constraintBottom_toBottomOf="parent"

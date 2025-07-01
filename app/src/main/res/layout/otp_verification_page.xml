@@ -1,145 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_margin="20dp"
-    android:weightSum="100"
     android:background="@color/babypink"
+    android:padding="24dp"
     tools:context=".otp_verification_page">
 
+    <!-- Step Indicator -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/stepIndicator"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_weight="20">
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/white">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:text="1"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/white">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:text="2"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/white">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:text="3"/>
-        </RelativeLayout>
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/otp_icon"
-        app:tint="@color/pink"
-        android:layout_weight="20"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter OTP sent to your E-mail address ::"
-        android:fontFamily="@font/mi_sans"
-        android:layout_gravity="center_vertical"
-        android:letterSpacing="0.08"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:layout_weight="5"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_weight="5">
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/dpurple">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/mi_sans"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:hint="OTP"
-            android:inputType="number"
-            android:maxLength="6"
-            android:fontFamily="@font/mi_sans"
-            android:textSize="18sp"
-            android:layout_margin="10dp"
-            android:background="@drawable/edit_text_rounded_corner"
-            android:elevation="5dp"
-            android:id="@+id/login_otp"
-            />
+        <View
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+            android:background="@color/dpurple" />
 
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/dpurple">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/mi_sans"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+            android:background="@color/dgray" />
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/mi_sans"
+                android:text="3"
+                android:textColor="@color/dgray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:layout_weight="10">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_rounded_corner"
-            android:text="NEXT"
-            android:backgroundTint="@color/dpurple"
-            android:textColor="@color/white"
-            android:fontFamily="@font/mi_sans"
-            android:id="@+id/login_next_btn"/>
-        <ProgressBar
-            android:layout_width="32dp"
-            android:layout_height="wrap_content"
-            android:indeterminateTint="@color/lpurple"
-            android:layout_gravity="center"
-            android:id="@+id/login_progress_bar"/>
-    </LinearLayout>
+    <!-- OTP Illustration -->
+    <ImageView
+        android:id="@+id/otpIllustration"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="OTP Verification"
+        android:src="@drawable/otp_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepIndicator"
+        app:tint="@color/pink" />
 
+    <!-- OTP Instructions -->
     <TextView
+        android:id="@+id/otpInstructions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
-        android:gravity="center"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/mi_sans"
-        android:textSize="18sp"
-        android:text="Resend OTP in 30 sec"
-        android:id="@+id/resend_otp_textview"/>
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:text="Enter OTP sent to your E-mail address"
+        android:textColor="@color/dpurple"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpIllustration" />
 
-</LinearLayout>
+    <!-- OTP Input Fields -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/otpCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpInstructions">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_lock"
+                    app:tint="@color/dpurple" />
+
+                <EditText
+                    android:id="@+id/login_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/mi_sans"
+                    android:hint="Enter 6-digit OTP"
+                    android:inputType="number"
+                    android:letterSpacing="0.3"
+                    android:maxLength="6"
+                    android:padding="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/dpurple"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Next Button and Progress Bar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/dpurple"
+        android:fontFamily="@font/mi_sans"
+        android:text="Verify OTP"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_arrow_forward"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpCardView" />
+
+    <ProgressBar
+        android:id="@+id/login_progress_bar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:indeterminateTint="@color/lpurple"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_next_btn" />
+
+    <!-- Resend OTP -->
+    <TextView
+        android:id="@+id/resend_otp_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/mi_sans"
+        android:padding="8dp"
+        android:text="Resend OTP in 30 sec"
+        android:textColor="@color/dpurple"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
