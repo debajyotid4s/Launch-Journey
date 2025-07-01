@@ -2,3 +2,6 @@
 
 
 "LaunchJourney" It's a ticket booking android platform. Java used for everything, Firebase RTDB used in some cases and Firestore database used for storing ticket data and user's data. 
+
+
+APK DL link: https://www.mediafire.com/file/j4wf3dgkoggefpa/LaunchJourney.apk/file
