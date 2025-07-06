@@ -57,6 +57,9 @@
 - **Modern UI**: Material Design, custom fonts, and smooth animation and premium feel, no sluggish-ness.
 - **Input Validation & OTP**: Ensures accurate user input and optional OTP-based verification (It's not implemented yet, cause Firebase stopped the service for FREE OTP verification).
 
+  
+![Launch journey(Android Studio) (1)](https://github.com/user-attachments/assets/d6a163c7-c4c6-4eae-8251-811215e865d0)
+
 ---
 ## Getting Started
 
@@ -67,9 +70,6 @@
 5. [Download APK](https://www.mediafire.com/file/j4wf3dgkoggefpa/LaunchJourney.apk/file) if you prefer direct install.
 
 ---
-
-
-![IMG_20250625_195741](https://github.com/user-attachments/assets/ef5af08f-d66d-4cd1-9cb0-30c17a0e5ac0)
 
 
 
